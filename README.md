@@ -1,70 +1,96 @@
-# Getting Started with Create React App
+#ReactJS-Coin-Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+01.ReactJS Practice
+-> 02.React-for-beginner
+-> 03.ReactJS To Do List :)
+-> 04.ReactJS-Coin-Tracker
 
-In the project directory, you can run:
 
-### `npm start`
+is super cool
+---------------------------------
+is super cool
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+#1. 리액트js 샘플 웹 시작하기.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. node.js 사이트가서 다운.  (nodejs.org)
+   설치하고 윈도우 커맨드에서 node -v 있는지 체크.
 
-### `npm test`
+2. npx체크하기
+   cmd에서 npx -v 해서 버전나오면 설치성공
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. 샘플 프로젝트 생성
+   cmd에서 npx create-react-app 내프로젝트명 (위치시킬 경로로 셋팅해야함. cd c:\users\desktop...처럼)
 
-### `npm run build`
+4. 개발툴에서 다운받아진 샘플 프로젝트를 열고나서 터미널에서 npm start를 해서 개발서버를 열어보자
+   ( 개발툴 웹스톰에서 진행했음)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+5. 그리고 소스트리에서 public에 index.html과, src안에 index.js파일등 소스 한번 둘러보자
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+6. 소스 파일 아무거나 수정해서 오토리로드 되는지도 보자 (서버가 올라왔으면 브라우저가 하나 떠있을거임)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+7. 완전 바닥부터 시작하기 위해, 기초작업 해주기
+   index.js 파일 에서 ▼
+   import React from 'react';
+   import ReactDOM from 'react-dom';
+   import App from './App';
 
-### `npm run eject`
+ReactDOM.render(
+<React.StrictMode>
+<App />
+</React.StrictMode>,
+document.getElementById('root')
+);
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+이것만 남기고 다지우기
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+8. app.js파일에서도 위에 import다 제거(logo랑 css)
+   그리고 리턴안에 div 기본태그 하나만 두기
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+9. 마지막으로 바닥부터 시작할거기 때문에 아래 파일들 다 삭제
+   App.test.js
+   App.css
+   index.css
+   logo.svg
+   reportWebVitals.js
+   setupTests.js
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+10. index.js랑 app.js만 남겨두기. 바닥부터 시작할 리액트앱의 초기설정 끝
 
-## Learn More
+※파일 날려버리고 수정 중간에 오류날수 있음.  그땐 브라우저 새로고침이나 npm restart 할것.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+------------------------------------------------------------------------
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#2. 만들어진 프로젝트 git으로 보내기
+1. 먼저 git저장소에 가서 new repository 하나 만들기.
+   readme.md추가 없이 그냥 단순하게 레파지토리 이름과 설명정도만 입력해서 생성
 
-### Code Splitting
+2. 생성이 완료되면 git 설정하는 설명 나오는데 다 무시하고 거기서 주소만 복사
+   (이렇게 생긴 주소 https://github.com/vanillabranch/react-for-beginners.git)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+3. 그 다음 개발툴로 와서 (웹스톰 사용했음) 터미널에서 아래 명령어들 순차적으로 실행.
 
-### Analyzing the Bundle Size
+4. git init
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+5. git remote add origin https://github.com/vanillabranch/movie_app_2021.git
 
-### Making a Progressive Web App
+6. git add .   <- 끝에 쩜 필수
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+7. git commit -m "commit message 적고싶은대로"
 
-### Advanced Configuration
+8. git push origin master
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+9. 여기까지 한 다음, 내 레파지토리로 가면 성공적으로 올라온것을 볼수 있음.
 
-### Deployment
+10. 이후 소스 수정할때마다, 6번부터 8번을 반복해주면 수정내용들을 꾸준히 커밋&푸시할수 있다.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+11. 하지만 이건 새로운 브랜치를 따지 않고, 머지도 없고, 컨플릭트도 없는 단독으로 혼자서 할때나 가능한 얘기다.
+    협업프로젝트시엔 git에 올리는 거 이후, 신규 브랜치, 머지, 컨플릭트 발생 처리등 다양하게 익혀야 한다.
 
-### `npm run build` fails to minify
+※참고로 git에서 올려버렸거나, 다른 팀원이 올린건 최신으로 받기 위해선, git pull origin master 하면 된다.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+------------------------------------------------------------------------
+#3. PropType 설치방법(값이 할당되어야 할 타입과 필수여부 등 지정하기 위함.)
+터미널 열고 npm i prop-types입력.
+만약 오류나면, npm audit fix 를 한다, (보통 오류 보정을 위한 코드가 제시됨)
+
